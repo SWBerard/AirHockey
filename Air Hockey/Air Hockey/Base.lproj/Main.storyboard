@@ -66,6 +66,12 @@
                             <constraint firstItem="MEd-ht-kg7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="yFJ-Z8-Ojq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomPaddle" destination="vk6-TY-ghM" id="Coj-7r-Iqr"/>
+                        <outlet property="centerLine" destination="qlW-0I-eSU" id="Xri-ld-LBE"/>
+                        <outlet property="puck" destination="bkR-0R-Tsb" id="QpU-Uf-NJZ"/>
+                        <outlet property="topPaddle" destination="MEd-ht-kg7" id="doK-4h-f0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

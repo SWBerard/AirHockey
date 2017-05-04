@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    var animator: UIDynamicAnimator!
+    @IBOutlet weak var topPaddle: UIView!
+    @IBOutlet weak var bottomPaddle: UIView!
+    @IBOutlet weak var puck: UIView!
+    @IBOutlet weak var centerLine: UIView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        animator = UIDynamicAnimator(referenceView: view)
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
