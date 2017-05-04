@@ -29,5 +29,11 @@ class ViewController: UIViewController {
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collisionBehavior)
     }
+    
+    @IBAction func userPannedTopView(_ sender: UIPanGestureRecognizer) {
+    }
+    
+    @IBAction func userPannedBottomView(_ sender: UIPanGestureRecognizer) {
+    }
 }
 

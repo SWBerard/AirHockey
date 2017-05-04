@@ -21,27 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-Ay-gTn">
+                                <rect key="frame" x="0.0" y="516" width="768" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="w4G-RV-Dqj" appends="YES" id="DrF-S3-MaV"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-4e-gAG">
+                                <rect key="frame" x="0.0" y="20" width="768" height="488"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1sk-H1-mfy" appends="YES" id="0NV-O2-c4s"/>
+                                </connections>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlW-0I-eSU">
                                 <rect key="frame" x="0.0" y="508" width="768" height="8"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="0Bd-i7-Ali"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vk6-TY-ghM">
-                                <rect key="frame" x="334" y="824" width="100" height="100"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="CrJ-up-Uxq"/>
-                                    <constraint firstAttribute="width" constant="100" id="hFh-YZ-thL"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-0R-Tsb">
-                                <rect key="frame" x="359" y="487" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GFl-4L-LNU"/>
-                                    <constraint firstAttribute="width" constant="50" id="f29-cm-SOB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEd-ht-kg7">
@@ -52,17 +52,41 @@
                                     <constraint firstAttribute="height" constant="100" id="sne-34-fcg"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-0R-Tsb">
+                                <rect key="frame" x="359" y="487" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GFl-4L-LNU"/>
+                                    <constraint firstAttribute="width" constant="50" id="f29-cm-SOB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vk6-TY-ghM">
+                                <rect key="frame" x="334" y="824" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CrJ-up-Uxq"/>
+                                    <constraint firstAttribute="width" constant="100" id="hFh-YZ-thL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qlW-0I-eSU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Um-1S-1Nn"/>
+                            <constraint firstAttribute="trailing" secondItem="eAo-4e-gAG" secondAttribute="trailing" id="3iG-Hj-rcN"/>
+                            <constraint firstItem="eAo-4e-gAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5zY-uG-6QP"/>
                             <constraint firstItem="bkR-0R-Tsb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EdD-71-PMb"/>
                             <constraint firstItem="vk6-TY-ghM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGz-qY-2q8"/>
                             <constraint firstItem="MEd-ht-kg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IrR-lF-Vpq"/>
+                            <constraint firstAttribute="bottom" secondItem="Zpd-Ay-gTn" secondAttribute="bottom" id="KRp-ZE-xZg"/>
+                            <constraint firstItem="qlW-0I-eSU" firstAttribute="top" secondItem="eAo-4e-gAG" secondAttribute="bottom" id="Ozm-Yg-XEN"/>
                             <constraint firstAttribute="trailing" secondItem="qlW-0I-eSU" secondAttribute="trailing" id="P91-X2-x5O"/>
                             <constraint firstItem="bkR-0R-Tsb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RaI-Jo-YHf"/>
+                            <constraint firstItem="Zpd-Ay-gTn" firstAttribute="top" secondItem="qlW-0I-eSU" secondAttribute="bottom" id="a98-bF-Q4z"/>
                             <constraint firstItem="qlW-0I-eSU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e48-MX-ppS"/>
+                            <constraint firstItem="Zpd-Ay-gTn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j9B-6Z-JfL"/>
+                            <constraint firstItem="eAo-4e-gAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n4f-Pd-eEk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vk6-TY-ghM" secondAttribute="bottom" constant="100" id="rad-E9-prP"/>
+                            <constraint firstAttribute="trailing" secondItem="Zpd-Ay-gTn" secondAttribute="trailing" id="yCF-FP-uQS"/>
                             <constraint firstItem="MEd-ht-kg7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="yFJ-Z8-Ojq"/>
                         </constraints>
                     </view>
@@ -74,6 +98,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1sk-H1-mfy" userLabel="Top Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="userPannedTopView:" destination="BYZ-38-t0r" id="IGp-t0-0r7"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="w4G-RV-Dqj" userLabel="Bottom Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="userPannedBottomView:" destination="BYZ-38-t0r" id="gz5-5q-5D2"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
         </scene>
