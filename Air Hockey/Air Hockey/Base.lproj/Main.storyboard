@@ -24,16 +24,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-Ay-gTn">
                                 <rect key="frame" x="0.0" y="516" width="768" height="508"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze1-FZ-jh3">
+                                        <rect key="frame" x="8" y="8" width="105" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Ze1-FZ-jh3" firstAttribute="top" secondItem="Zpd-Ay-gTn" secondAttribute="top" constant="8" id="7eq-L9-6yD"/>
+                                    <constraint firstItem="Ze1-FZ-jh3" firstAttribute="leading" secondItem="Zpd-Ay-gTn" secondAttribute="leading" constant="8" id="KrX-jG-Gwd"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="w4G-RV-Dqj" appends="YES" id="DrF-S3-MaV"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-4e-gAG">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="508"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2J-kb-ocW">
+                                        <rect key="frame" x="8" y="479" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="s2J-kb-ocW" secondAttribute="bottom" constant="8" id="0i1-cv-g8v"/>
+                                    <constraint firstItem="s2J-kb-ocW" firstAttribute="leading" secondItem="eAo-4e-gAG" secondAttribute="leading" constant="8" id="tiQ-NN-BKN"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1sk-H1-mfy" appends="YES" id="0NV-O2-c4s"/>
                                 </connections>
@@ -122,10 +146,12 @@
                     <connections>
                         <outlet property="bottomGoal" destination="qf1-oz-w5r" id="5MA-uv-5eJ"/>
                         <outlet property="bottomPaddle" destination="vk6-TY-ghM" id="Coj-7r-Iqr"/>
+                        <outlet property="bottomScoreLabel" destination="Ze1-FZ-jh3" id="NwF-fO-j4N"/>
                         <outlet property="centerLine" destination="qlW-0I-eSU" id="Xri-ld-LBE"/>
                         <outlet property="puck" destination="bkR-0R-Tsb" id="QpU-Uf-NJZ"/>
                         <outlet property="topGoal" destination="gjc-XI-VXT" id="JRi-Nc-dpU"/>
                         <outlet property="topPaddle" destination="MEd-ht-kg7" id="doK-4h-f0u"/>
+                        <outlet property="topScoreLabel" destination="s2J-kb-ocW" id="Jnb-ig-IHR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

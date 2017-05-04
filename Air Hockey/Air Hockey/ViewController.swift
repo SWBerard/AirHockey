@@ -17,12 +17,20 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var centerLine: UIView!
     @IBOutlet weak var topGoal: UIView!
     @IBOutlet weak var bottomGoal: UIView!
+    @IBOutlet weak var topScoreLabel: UILabel!
+    @IBOutlet weak var bottomScoreLabel: UILabel!
     
     var topSnapBehavior: UISnapBehavior?
     var bottomSnapBehavior: UISnapBehavior?
     
+    var topScore = 0
+    var bottomScore = 0
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        topScoreLabel.text = "0"
+        bottomScoreLabel.text = "0"
         
         animator = UIDynamicAnimator(referenceView: view)
         
@@ -83,7 +91,20 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item1: UIDynamicItem, with item2: UIDynamicItem, at p: CGPoint) {
         
-        print("This happened")
+        let item1 = item1 as! UIView
+        let item2 = item2 as! UIView
+        
+        if item1 == topGoal || item2 == topGoal {
+            // Bottom scores
+            bottomScore += 1
+            bottomScoreLabel.text = "\(bottomScore)"
+        }
+        
+        if item1 == bottomGoal || item2 == bottomGoal {
+            // Top scores
+            topScore += 1
+            topScoreLabel.text = "\(topScore)"
+        }
     }
 }
 
