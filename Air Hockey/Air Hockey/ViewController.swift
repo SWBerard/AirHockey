@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     var animator: UIDynamicAnimator!
     @IBOutlet weak var topPaddle: UIView!
     @IBOutlet weak var bottomPaddle: UIView!
     @IBOutlet weak var puck: UIView!
     @IBOutlet weak var centerLine: UIView!
+    @IBOutlet weak var topGoal: UIView!
+    @IBOutlet weak var bottomGoal: UIView!
     
     var topSnapBehavior: UISnapBehavior?
     var bottomSnapBehavior: UISnapBehavior?
@@ -31,10 +33,20 @@ class ViewController: UIViewController {
         let paddleSideCollisionBehavior = UICollisionBehavior(items: [topPaddle, bottomPaddle, centerLine])
         animator.addBehavior(paddleSideCollisionBehavior)
         
+        let goalCollisionBehavior = UICollisionBehavior(items: [puck, topGoal, bottomGoal])
+        goalCollisionBehavior.collisionDelegate = self
+        animator.addBehavior(goalCollisionBehavior)
+        
         let attachmentBehavior = UIAttachmentBehavior(item: centerLine, attachedToAnchor: centerLine.center)
         animator.addBehavior(attachmentBehavior)
         
-        let dynamicItemBehavior = UIDynamicItemBehavior(items: [centerLine])
+        let topGoalAttachmentBehavior = UIAttachmentBehavior(item: topGoal, attachedToAnchor: topGoal.center)
+        animator.addBehavior(topGoalAttachmentBehavior)
+        
+        let bottomGoalAttachmentBehavior = UIAttachmentBehavior(item: bottomGoal, attachedToAnchor: bottomGoal.center)
+        animator.addBehavior(bottomGoalAttachmentBehavior)
+        
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [centerLine, topGoal, bottomGoal])
         dynamicItemBehavior.allowsRotation = false
         animator.addBehavior(dynamicItemBehavior)
     }
@@ -67,6 +79,11 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item1: UIDynamicItem, with item2: UIDynamicItem, at p: CGPoint) {
+        
+        print("This happened")
     }
 }
 
