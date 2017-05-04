@@ -24,13 +24,19 @@ class ViewController: UIViewController {
         
         animator = UIDynamicAnimator(referenceView: view)
         
-        let gravityBehavior = UIGravityBehavior(items: [puck])
-        gravityBehavior.magnitude = 1.0
-        animator.addBehavior(gravityBehavior)
-        
         let collisionBehavior = UICollisionBehavior(items: [puck, bottomPaddle, topPaddle])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collisionBehavior)
+        
+        let paddleSideCollisionBehavior = UICollisionBehavior(items: [topPaddle, bottomPaddle, centerLine])
+        animator.addBehavior(paddleSideCollisionBehavior)
+        
+        let attachmentBehavior = UIAttachmentBehavior(item: centerLine, attachedToAnchor: centerLine.center)
+        animator.addBehavior(attachmentBehavior)
+        
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [centerLine])
+        dynamicItemBehavior.allowsRotation = false
+        animator.addBehavior(dynamicItemBehavior)
     }
     
     @IBAction func userPannedTopView(_ sender: UIPanGestureRecognizer) {
