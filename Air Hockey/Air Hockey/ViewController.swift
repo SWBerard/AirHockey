@@ -17,10 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var centerLine: UIView!
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         animator = UIDynamicAnimator(referenceView: view)
         
+        let gravityBehavior = UIGravityBehavior(items: [puck])
+        gravityBehavior.magnitude = 1.0
+        animator.addBehavior(gravityBehavior)
         
+        let collisionBehavior = UICollisionBehavior(items: [puck, bottomPaddle])
+        collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collisionBehavior)
     }
 }
 
