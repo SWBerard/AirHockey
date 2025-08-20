@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate, PaddleViewD
     
     var topSnap: UISnapBehavior?
     var bottomSnap: UISnapBehavior?
+    var paddleBehavior: UIDynamicItemBehavior!
 
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var bottomContainerView: UIView!
@@ -83,39 +84,55 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate, PaddleViewD
         let goalCollision = UICollisionBehavior(items: [puck, topGoal, bottomGoal])
         goalCollision.collisionDelegate = self
         animator.addBehavior(goalCollision)
+        
+        paddleBehavior = UIDynamicItemBehavior(items: [topPaddle, bottomPaddle])
+        paddleBehavior.allowsRotation = false
+        paddleBehavior.friction = 0         // paddles should slide freely
+        paddleBehavior.resistance = 0.7        // don’t bleed velocity too fast
+        paddleBehavior.elasticity = 0.9        // lively bounces
+        paddleBehavior.density = 10.0          // give them “mass” vs. puck
+        animator.addBehavior(paddleBehavior)
     }
     
     @IBAction func userPannedInTopView(_ sender: UIPanGestureRecognizer) {
         
-        if let topSnap = topSnap {
-            animator.removeBehavior(topSnap)
-        }
+        let desired = sender.location(in: view)
+
+        // Clamp so it can’t cross into/through middleView
+        let x = clampedX(for: topPaddle, desiredX: desired.x)
+        let y = clampTopPaddleY(desired.y, paddle: topPaddle)
+        let clamped = CGPoint(x: x, y: y)
         
-        switch sender.state {
-        case .began, .changed:
-            if sender.location(in: view).y < topContainerView.bounds.height {
-                topSnap = UISnapBehavior(item: topPaddle, snapTo: sender.location(in: view))
-                animator.addBehavior(topSnap!)
-            }
-        default:
-            break
+        if sender.state == .changed || sender.state == .began {
+            topPaddle.center = clamped
+            animator.updateItem(usingCurrentState: topPaddle)
+            
+            // velocity injection (delta form to avoid runaway)
+            let desiredVel = sender.velocity(in: view)
+            let currentVel = paddleBehavior.linearVelocity(for: topPaddle)
+            let delta = CGPoint(x: desiredVel.x - currentVel.x, y: desiredVel.y - currentVel.y)
+            paddleBehavior.addLinearVelocity(delta, for: topPaddle)
         }
     }
     
     @IBAction func userPannedInBottomView(_ sender: UIPanGestureRecognizer) {
+
+        let desired = sender.location(in: view)
+
+        // Clamp so it stays below/away from middleView
+        let x = clampedX(for: bottomPaddle, desiredX: desired.x)
+        let y = clampBottomPaddleY(desired.y, paddle: bottomPaddle)
+        let clamped = CGPoint(x: x, y: y)
         
-        if let bottomSnap = bottomSnap {
-            animator.removeBehavior(bottomSnap)
-        }
-        
-        switch sender.state {
-        case .began, .changed:
-            if sender.location(in: bottomContainerView).y > 0 {
-                bottomSnap = UISnapBehavior(item: bottomPaddle, snapTo: sender.location(in: view))
-                animator.addBehavior(bottomSnap!)
-            }
-        default:
-            break
+        if sender.state == .changed || sender.state == .began {
+            bottomPaddle.center = clamped
+            animator.updateItem(usingCurrentState: bottomPaddle)
+            
+            // velocity injection (delta form)
+            let desiredVel = sender.velocity(in: view)
+            let currentVel = paddleBehavior.linearVelocity(for: bottomPaddle)
+            let delta = CGPoint(x: desiredVel.x - currentVel.x, y: desiredVel.y - currentVel.y)
+            paddleBehavior.addLinearVelocity(delta, for: bottomPaddle)
         }
     }
     
@@ -160,6 +177,28 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate, PaddleViewD
                 self.topContainerView.backgroundColor = UIColor.white
             }
         }
+    }
+    
+    // Helpers
+    private func clampedX(for paddle: UIView, desiredX: CGFloat) -> CGFloat {
+        let half = paddle.bounds.width * 0.5
+        return min(max(desiredX, half), view.bounds.width - half)
+    }
+
+    private func clampTopPaddleY(_ desiredY: CGFloat, paddle: UIView) -> CGFloat {
+        let half = paddle.bounds.height * 0.5
+        // Keep the whole paddle within the top container and above the middle
+        let minY = topContainerView.frame.minY + half
+        let maxY = min(middleView.frame.minY - half, topContainerView.frame.maxY - half)
+        return min(max(desiredY, minY), maxY)
+    }
+
+    private func clampBottomPaddleY(_ desiredY: CGFloat, paddle: UIView) -> CGFloat {
+        let half = paddle.bounds.height * 0.5
+        // Keep the whole paddle within the bottom container and below the middle
+        let minY = max(middleView.frame.maxY + half, bottomContainerView.frame.minY + half)
+        let maxY = bottomContainerView.frame.maxY - half
+        return min(max(desiredY, minY), maxY)
     }
 }
 
