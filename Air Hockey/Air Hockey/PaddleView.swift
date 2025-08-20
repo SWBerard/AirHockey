@@ -35,7 +35,7 @@ class PaddleView: UIView {
         }
     }
 
-    func handlePanGesture(_ panGesture: UIPanGestureRecognizer) {
+    @objc func handlePanGesture(_ panGesture: UIPanGestureRecognizer) {
         delegate?.handlePanGesture(panGesture, for: self)
     }
 }

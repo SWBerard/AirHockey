@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042334A31EB82FAA00A208E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042334A21EB82FAA00A208E9 /* AppDelegate.swift */; };
-		042334A51EB82FAA00A208E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042334A41EB82FAA00A208E9 /* ViewController.swift */; };
-		042334A81EB82FAA00A208E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042334A61EB82FAA00A208E9 /* Main.storyboard */; };
-		042334AA1EB82FAA00A208E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042334A91EB82FAA00A208E9 /* Assets.xcassets */; };
-		042334AD1EB82FAA00A208E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042334AB1EB82FAA00A208E9 /* LaunchScreen.storyboard */; };
-		04EB558C1EB857110044B01D /* PaddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB558B1EB857110044B01D /* PaddleView.swift */; };
-		04EB558E1EB85ACA0044B01D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB558D1EB85ACA0044B01D /* CircleView.swift */; };
+		04D533122E565686002EC4E1 /* PaddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D533112E565686002EC4E1 /* PaddleView.swift */; };
+		04D533132E565686002EC4E1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D533102E565686002EC4E1 /* CircleView.swift */; };
+		4823A2A01EBACAC000FC37FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823A29F1EBACAC000FC37FA /* AppDelegate.swift */; };
+		4823A2A21EBACAC000FC37FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823A2A11EBACAC000FC37FA /* ViewController.swift */; };
+		4823A2A51EBACAC000FC37FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4823A2A31EBACAC000FC37FA /* Main.storyboard */; };
+		4823A2A71EBACAC000FC37FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4823A2A61EBACAC000FC37FA /* Assets.xcassets */; };
+		4823A2AA1EBACAC000FC37FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4823A2A81EBACAC000FC37FA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0423349F1EB82FAA00A208E9 /* Air Hockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Hockey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		042334A21EB82FAA00A208E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		042334A41EB82FAA00A208E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		042334A71EB82FAA00A208E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		042334A91EB82FAA00A208E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		042334AC1EB82FAA00A208E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		042334AE1EB82FAA00A208E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04EB558B1EB857110044B01D /* PaddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddleView.swift; sourceTree = "<group>"; };
-		04EB558D1EB85ACA0044B01D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		04D533102E565686002EC4E1 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		04D533112E565686002EC4E1 /* PaddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleView.swift; sourceTree = "<group>"; };
+		4823A29C1EBACAC000FC37FA /* Air Hockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Hockey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4823A29F1EBACAC000FC37FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4823A2A11EBACAC000FC37FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4823A2A41EBACAC000FC37FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4823A2A61EBACAC000FC37FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4823A2A91EBACAC000FC37FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4823A2AB1EBACAC000FC37FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0423349C1EB82FAA00A208E9 /* Frameworks */ = {
+		4823A2991EBACAC000FC37FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		042334961EB82FAA00A208E9 = {
+		4823A2931EBACAC000FC37FA = {
 			isa = PBXGroup;
 			children = (
-				042334A11EB82FAA00A208E9 /* Air Hockey */,
-				042334A01EB82FAA00A208E9 /* Products */,
+				4823A29E1EBACAC000FC37FA /* Air Hockey */,
+				4823A29D1EBACAC000FC37FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		042334A01EB82FAA00A208E9 /* Products */ = {
+		4823A29D1EBACAC000FC37FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0423349F1EB82FAA00A208E9 /* Air Hockey.app */,
+				4823A29C1EBACAC000FC37FA /* Air Hockey.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		042334A11EB82FAA00A208E9 /* Air Hockey */ = {
+		4823A29E1EBACAC000FC37FA /* Air Hockey */ = {
 			isa = PBXGroup;
 			children = (
-				042334A21EB82FAA00A208E9 /* AppDelegate.swift */,
-				042334A41EB82FAA00A208E9 /* ViewController.swift */,
-				04EB558B1EB857110044B01D /* PaddleView.swift */,
-				04EB558D1EB85ACA0044B01D /* CircleView.swift */,
-				042334A61EB82FAA00A208E9 /* Main.storyboard */,
-				042334A91EB82FAA00A208E9 /* Assets.xcassets */,
-				042334AB1EB82FAA00A208E9 /* LaunchScreen.storyboard */,
-				042334AE1EB82FAA00A208E9 /* Info.plist */,
+				4823A29F1EBACAC000FC37FA /* AppDelegate.swift */,
+				4823A2A11EBACAC000FC37FA /* ViewController.swift */,
+				04D533102E565686002EC4E1 /* CircleView.swift */,
+				04D533112E565686002EC4E1 /* PaddleView.swift */,
+				4823A2A31EBACAC000FC37FA /* Main.storyboard */,
+				4823A2A61EBACAC000FC37FA /* Assets.xcassets */,
+				4823A2A81EBACAC000FC37FA /* LaunchScreen.storyboard */,
+				4823A2AB1EBACAC000FC37FA /* Info.plist */,
 			);
 			path = "Air Hockey";
 			sourceTree = "<group>";
@@ -73,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0423349E1EB82FAA00A208E9 /* Air Hockey */ = {
+		4823A29B1EBACAC000FC37FA /* Air Hockey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 042334B11EB82FAA00A208E9 /* Build configuration list for PBXNativeTarget "Air Hockey" */;
+			buildConfigurationList = 4823A2AE1EBACAC000FC37FA /* Build configuration list for PBXNativeTarget "Air Hockey" */;
 			buildPhases = (
-				0423349B1EB82FAA00A208E9 /* Sources */,
-				0423349C1EB82FAA00A208E9 /* Frameworks */,
-				0423349D1EB82FAA00A208E9 /* Resources */,
+				4823A2981EBACAC000FC37FA /* Sources */,
+				4823A2991EBACAC000FC37FA /* Frameworks */,
+				4823A29A1EBACAC000FC37FA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,84 +87,85 @@
 			);
 			name = "Air Hockey";
 			productName = "Air Hockey";
-			productReference = 0423349F1EB82FAA00A208E9 /* Air Hockey.app */;
+			productReference = 4823A29C1EBACAC000FC37FA /* Air Hockey.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		042334971EB82FAA00A208E9 /* Project object */ = {
+		4823A2941EBACAC000FC37FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Steven Berard";
+				ORGANIZATIONNAME = "Event Farm";
 				TargetAttributes = {
-					0423349E1EB82FAA00A208E9 = {
+					4823A29B1EBACAC000FC37FA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BCKNZ6J69F;
+						DevelopmentTeam = MGKLTU8Z22;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 0423349A1EB82FAA00A208E9 /* Build configuration list for PBXProject "Air Hockey" */;
+			buildConfigurationList = 4823A2971EBACAC000FC37FA /* Build configuration list for PBXProject "Air Hockey" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
-			mainGroup = 042334961EB82FAA00A208E9;
-			productRefGroup = 042334A01EB82FAA00A208E9 /* Products */;
+			mainGroup = 4823A2931EBACAC000FC37FA;
+			productRefGroup = 4823A29D1EBACAC000FC37FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0423349E1EB82FAA00A208E9 /* Air Hockey */,
+				4823A29B1EBACAC000FC37FA /* Air Hockey */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0423349D1EB82FAA00A208E9 /* Resources */ = {
+		4823A29A1EBACAC000FC37FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042334AD1EB82FAA00A208E9 /* LaunchScreen.storyboard in Resources */,
-				042334AA1EB82FAA00A208E9 /* Assets.xcassets in Resources */,
-				042334A81EB82FAA00A208E9 /* Main.storyboard in Resources */,
+				4823A2AA1EBACAC000FC37FA /* LaunchScreen.storyboard in Resources */,
+				4823A2A71EBACAC000FC37FA /* Assets.xcassets in Resources */,
+				4823A2A51EBACAC000FC37FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0423349B1EB82FAA00A208E9 /* Sources */ = {
+		4823A2981EBACAC000FC37FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EB558E1EB85ACA0044B01D /* CircleView.swift in Sources */,
-				042334A51EB82FAA00A208E9 /* ViewController.swift in Sources */,
-				042334A31EB82FAA00A208E9 /* AppDelegate.swift in Sources */,
-				04EB558C1EB857110044B01D /* PaddleView.swift in Sources */,
+				4823A2A21EBACAC000FC37FA /* ViewController.swift in Sources */,
+				04D533122E565686002EC4E1 /* PaddleView.swift in Sources */,
+				04D533132E565686002EC4E1 /* CircleView.swift in Sources */,
+				4823A2A01EBACAC000FC37FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		042334A61EB82FAA00A208E9 /* Main.storyboard */ = {
+		4823A2A31EBACAC000FC37FA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				042334A71EB82FAA00A208E9 /* Base */,
+				4823A2A41EBACAC000FC37FA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		042334AB1EB82FAA00A208E9 /* LaunchScreen.storyboard */ = {
+		4823A2A81EBACAC000FC37FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				042334AC1EB82FAA00A208E9 /* Base */,
+				4823A2A91EBACAC000FC37FA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -172,7 +173,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		042334AF1EB82FAA00A208E9 /* Debug */ = {
+		4823A2AC1EBACAC000FC37FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -223,7 +224,7 @@
 			};
 			name = Debug;
 		};
-		042334B01EB82FAA00A208E9 /* Release */ = {
+		4823A2AD1EBACAC000FC37FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -267,30 +268,30 @@
 			};
 			name = Release;
 		};
-		042334B21EB82FAA00A208E9 /* Debug */ = {
+		4823A2AF1EBACAC000FC37FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BCKNZ6J69F;
+				DEVELOPMENT_TEAM = MGKLTU8Z22;
 				INFOPLIST_FILE = "Air Hockey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenBerard.Air-Hockey";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.EventFarm.Air-Hockey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		042334B31EB82FAA00A208E9 /* Release */ = {
+		4823A2B01EBACAC000FC37FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BCKNZ6J69F;
+				DEVELOPMENT_TEAM = MGKLTU8Z22;
 				INFOPLIST_FILE = "Air Hockey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenBerard.Air-Hockey";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.EventFarm.Air-Hockey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -298,25 +299,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0423349A1EB82FAA00A208E9 /* Build configuration list for PBXProject "Air Hockey" */ = {
+		4823A2971EBACAC000FC37FA /* Build configuration list for PBXProject "Air Hockey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				042334AF1EB82FAA00A208E9 /* Debug */,
-				042334B01EB82FAA00A208E9 /* Release */,
+				4823A2AC1EBACAC000FC37FA /* Debug */,
+				4823A2AD1EBACAC000FC37FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		042334B11EB82FAA00A208E9 /* Build configuration list for PBXNativeTarget "Air Hockey" */ = {
+		4823A2AE1EBACAC000FC37FA /* Build configuration list for PBXNativeTarget "Air Hockey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				042334B21EB82FAA00A208E9 /* Debug */,
-				042334B31EB82FAA00A208E9 /* Release */,
+				4823A2AF1EBACAC000FC37FA /* Debug */,
+				4823A2B01EBACAC000FC37FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 042334971EB82FAA00A208E9 /* Project object */;
+	rootObject = 4823A2941EBACAC000FC37FA /* Project object */;
 }
